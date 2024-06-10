@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{siunitx}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption} 
+
+\geometry{
+top=2.5cm,
+bottom=2.5cm,
+left=2.5cm,
+right=2.5cm,
+}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Motion Capturing}
+\fancyhead[R]{Medizintechnisches Praktikum}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+% Custom title format for the titlepage
+\titleformat{\section}
+{\large\bfseries\centering}{}{1em}{}[\titlerule]
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+% Title
+{\Huge\bfseries Motion Capturing}
+\vspace{1.5cm}
+% Author
+{\LARGE Lukas Reinker, M.Sc.}
+\vspace{0.5cm}
+% Date
+{\Large { \today}}
+\vfill
+% Subtitle
+{\Large\bfseries Medizintechnisches Praktikum}
+\vspace{0.5cm}
+% Semester
+{\Large Semester: BE4}
+\vspace{0.5cm}
+% Course
+{\Large Studiengang: Biomedical Engineering}
+\vspace{1.5cm}
+% Logo (Optional)
+%\includegraphics[width=0.4\textwidth]{LBM_Logo_2.png} % Füge hier den Pfad zu deinem Logo ein
+\vspace{1.5cm}
+% Team members table
+\section*{Gruppenmitglieder}
+\vspace{0.5cm}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{5cm}|}
+\hline
+\textbf{Name} & \textbf{Matrikelnummer} \\
+\hline
+Maximilian Mete & 3362419 \\
+Dominic Ander & 3361566 \\
+Noah Beyer & 3363458 \\
+Jonas Frosch & 3333813 \\
+\hline
+\end{tabular}
+\end{table}
+\vspace*{2cm}
+\end{center}
+\end{titlepage}
+\end{document}
