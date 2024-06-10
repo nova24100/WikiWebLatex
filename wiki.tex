@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper,bibliography=totoc,listof=totoc,pointlessnumbers,open=any]{scrbook}
+
+\usepackage[left=3.0cm,right=2.5cm,top=2.5cm,bottom=3cm]{geometry}	% Seitenränder
+\headsep = 1.0cm
+\footskip = 1.0cm
+                          
+\addtokomafont{disposition}{\rmfamily}
+\addtokomafont{chapter}{\rmfamily}
+\addtokomafont{section}{\rmfamily}
+\addtokomafont{subsection}{\rmfamily}
+\addtokomafont{subsubsection}{\rmfamily}
+
+\usepackage{setspace} 						% Zeilenabstand 1,5
+\onehalfspacing
+
+\usepackage[utf8]{inputenc}					
+\usepackage[english]{babel}					% Silbentrennung
+\usepackage{amsmath}						% mathematische Formeln
+\usepackage{amsfonts}						% mathematische Schriften
+\usepackage{amssymb}						% mathematische Symbole
+\usepackage{graphicx}						% Einbinden von Graphiken
+\usepackage[version=4]{mhchem}
+\usepackage{subfigure}						% Ermöglicht ein Subfigure
+\usepackage{pdfpages} 						
+\usepackage{acronym}						% Symbol- und Abkürzungsverzeichnis
+\usepackage[figuresright]{rotating}
+\usepackage{subcaption}
+
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+
+%-------MATLAB-------------------------------------------------
+\usepackage{matlab-prettifier}
+\definecolor{number}{gray}{0.6}
+\definecolor{back}{gray}{0.95}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+
+\usepackage{color}                  %\definecolor
+\usepackage{listings}               %Programmcodeumgebung für Matlab Code
+
+\usepackage{units} 							% Schreiben von Zahlen mit Einheit mit kleinerem Abstand
+\usepackage{fix-cm}							% Schriften größer als \Huge
+\usepackage{multirow} 						% Tabelle - Spalten verbinden
+\usepackage{array}
+\usepackage{here}							% Gleitobjekte "fest setzen"
+
+\usepackage{float}							% ermöglicht Gleitobjekte
+\usepackage[font=footnotesize,labelfont=bf]{caption}						% ermöglicht Umbrüche in Bildunterschriften
+
+\usepackage{chngcntr}						% Nummerierung nach Kapitel für Abbildungen, Tabellen, Formeln
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+\counterwithin{equation}{chapter}
+
+\usepackage{longtable}						% lange Tabellen über mehrere Seiten
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\usepackage[headsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\automark[section]{chapter}
+
+
+\usepackage{longtable}						% lange Tabellen über mehrere Seiten
+
+\usepackage[tracking=true]{microtype}		% Anpassen der Abstände zwischen den Buchstaben für Blocksatz
+
+\graphicspath{{Figures/}} 					% Pfad für Bidler
+\def\figurename{Figure } 					% keyword for the captions
+
+\DeclareMicrotypeSet*[tracking]{my} %
+{ font = */*/*/sc/* }% 
+\SetTracking{ encoding = *, shape = sc }{ 45 }% Hier wird festgelegt, dass alle Passagen in Kapitälchen automatisch leicht gesperrt werden. 
+
+\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref} % Verlinkung von Inhalts- und Abbildungsverzeichnis 
+\usepackage[all]{hypcap} 
+
+\usepackage[numbers]{natbib}				% Paket zur Einbindung des Literaturverzeichnisses 
+
+\usepackage{scrhack}						% Behebt Probleme zwischen den einzelnen Paketen
+
+\begin{document}
+\pagestyle{scrheadings}
+
+\newpage
+\thispagestyle{empty}
+\begin{flushleft}
+	\includegraphics[width=0.5\textwidth]{Titel/OTH_CMM_Logo.pdf}
+\end{flushleft}
+
+\begin{centering}
+	\bigskip 
+	\bigskip
+	\bigskip
+	\bigskip		
+	\bigskip
+	\huge\textrm{\textbf{Modelling the mechanical behaviour of the thoracic aorta for a stent-aorta interaction in Abaqus }}\\
+	\bigskip
+	\bigskip
+	\bigskip 
+	\bigskip 
+	\bigskip
+		\bigskip
+		\bigskip 
+		\bigskip
+		\bigskip
+	\LARGE\textrm{\textbf{ABSCHLUSSARBEIT}}\\
+	\bigskip
+	\small\textrm{zur Erlangung des akademischen Grads}\\
+	\smallskip
+	\large\textrm{\textbf{\glqq Bachelor of Science (B.Sc.)\grqq}}\\
+	\smallskip
+	\small\textrm{an der}\\
+	\smallskip
+	\large\textrm{\textbf{Ostbayerischen Technischen Hochschule Regensburg}}\\
+	\smallskip
+	\small\textrm{Fakultät Maschinenbau}\\
+	\smallskip
+	\small\textrm{Computational Mechanics and Materials Lab}\\
+	\smallskip
+	\small\textrm{im Studiengang}\\
+	\smallskip
+	\large\textrm{\textbf{Bachelor Biomedical Engineering}}
+	\bigskip 
+	\bigskip 
+	\bigskip
+	\bigskip
+	\bigskip 
+	\bigskip
+	\bigskip 
+	\bigskip
+	\bigskip 
+    \begin{table}[H]
+    	\flushleft
+    	\renewcommand{\arraystretch}{1.2}
+    	\begin{tabular}{ll}
+    	\textbf{Autor:} & \textrm{Nova Sassin} \\ 
+    	 & \textrm{Matr.-Nr: } 3215867 \\
+    	\textbf{Betreuer:} & \textrm{Philipp Marx, M.Sc.} \\ 
+    	\textbf{Aufgabenstellerin:} & \textrm{Prof. Dr.-Ing. Aida Nonn}
+    	\end{tabular}
+    \end{table}
+\end{centering}
